@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<!-- Head -->
+<!-- Head -->
+<!-- Head -->
+
+<head>
+    <title> Guessle - Административна зона </title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="code-admin.js"></script>
+    <style>
+
+        #copybtn, #toHome{
+            background-color: grey;
+            color: black;
+            width: 90px;
+            height: 50px;
+            font-weight: bold;
+     font-family: arial;
+        }
+
+        #toHome{
+            width: 200px;
+            left: 3rem;
+        }
+
+    </style>
+</head>
+
+<!-- Body -->
+<!-- Body -->
+<!-- Body -->
+
+<body>
+
+    <div id="header" style="display: block;">
+        <h1 style="color: white; font-family: arial; text-align: center;"> GUESSLE </h1>
+    </div>
+
+    <h3>Административна зона</h3>
+
+
+    <hr>
+
+    <h3 id="loadingwords">LOADING... Please wait...</h3>
+    
+    
+<span onclick="window.location.href='https://guessle.w3spaces.com/index.html';" style="position: absolute; right: 3rem;">
+<img width="40" height="40" src="https://img.icons8.com/ios-filled/50/FFFFFF/country-house.png" alt="country-house"/>
+</span>
+
+
+    <div style="margin-left: 20px;">
+        <p>Редакция на дума:</p>
+        <div style="text-align: center; width: 200px; height: 50px; background-color: grey; border-radius: 6px;">
+            <p>grey</p>
+        </div>
+        <div style="text-align: center; width: 200px; height: 50px; background-color: rgb(252 173 17); border-radius: 6px;">
+            <p>rgb(252 173 17)</p>
+        </div>
+        <div style="text-align: center; width: 200px; height: 50px; background-color: #6aaa64; border-radius: 6px;">
+            <p>#6aaa64</p>
+        </div>
+        <p>Дизайн:</p>
+        <textarea id = "comp" style="width: 90%; height: 60%;" onkeyup = "compile(this)"><div class="inf">
+
+        <button style="background-color: #6aaa64" aria-label="blank, " class="rowletter" disabled=""> H </button>
+
+        <button style="background-color: #6aaa64" aria-label="blank, " class="rowletter" disabled=""> E </button>
+
+        <button style="background-color: #6aaa64" aria-label="blank, " class="rowletter" disabled=""> L </button>
+
+        <button style="background-color: #6aaa64" class="rowletter" disabled=""> L </button>
+
+        <button style="background-color: #6aaa64" aria-label="blank, " class="rowletter" disabled=""> O </button>
+</div></textarea>
+<br>
+        <button id="copybtn" onclick="copyCode()">
+            Копирай
+        </button>
+
+        <p>Резултат:</p>
+        <div id="output" style="margin-bottom: 90px;">
+            <p style="text-align: center;">Натисни някой клавиш, за да се компилира!</p>
+        </div>
+
+        <p>Оформление на JSON. Напиши на всеки ред по една дума:</p>
+        <textarea id="wordsT"></textarea><br>
+        <button id="copybtn" onclick="convertToJSON()">
+            Оформи
+        </button>
+        <p>Визуализация на JSON:</p>
+        <textarea id="JSONvis"></textarea><br>
+        <button id="copybtn" onclick="copyCode1()">
+            Копирай
+        </button>
+    </div>
+
+    <hr style="margin-top: 350px;">
+    <h1>Made by rado24</h1>
+
+    <h3 style="margin-bottom: 30px;"> Copyright 2023 - 2025 Guessle </h3>
+
+</body>
+
+</html>
