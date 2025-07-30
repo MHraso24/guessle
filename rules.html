@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> Guessle </title>
+        <link rel="icon" type="image/x-icon" href="icon.png">
+<link href="/static/css/9.2f0fb96a.chunk.css" rel="stylesheet">
+<link href="/static/css/main.120de9cf.chunk.css" rel="stylesheet">
+    
+    <style>
+        
+::-webkit-scrollbar {
+  width: 10.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+        body {
+            background-color: #000;
+        }
+        h1, h2, h3, h4, h5, p {
+            font-family: arial;
+            color: white;
+        }
+        p {
+            font-size: 22px;
+        }
+        h1, h2, h3, h4, h5 {
+            font-weight: bold;
+            text-align: center;
+        }
+        .rowletter{
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 60px;
+    width: 60px;
+    margin: 3px;
+    border: 2px solid var(--tile-border-color);
+    padding: 0;
+    color: var(--tile-color);
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    user-select: none;
+}
+button {
+    border-radius: 6px;
+    font-size: 16px;
+    border: none;
+    color: inherit;
+    height: 36px;
+}
+
+button {
+    color: white;
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-stretch: ;
+    
+    font-family: ;
+    text-rendering: auto;
+    
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    border: 3px solid;
+    
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    
+    align-items: flex-start;
+    cursor: default;
+    
+}
+
+
+.inf, #image{
+   
+  position: absolute;
+  //top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+</style>
+
+<!-- CSS for the sections -->
+<style>
+
+#section1 {
+  border-radius: 5px;
+  left: 2rem;
+  position: absolute;
+  width: 95%;
+  height: 160px;
+  border-left: 4px solid;
+  background-color: grey;
+  border-color: lightgrey;
+  color: #cc7e00;
+}
+
+#section2 {
+  border-radius: 5px;
+  left: 2rem;
+  position: absolute;
+  width: 95%;
+  height: 110px;
+  border-left: 4px solid;
+  background-color: grey;
+  border-color: lightgrey;
+  color: #cc7e00;
+}
+
+#section3 {
+  border-radius: 5px;
+  left: 2rem;
+  position: absolute;
+  width: 95%;
+  height: 66px;
+  border-left: 4px solid;
+  background-color: grey;
+  border-color: lightgrey;
+  color: #cc7e00;
+}
+
+#section4 {
+  border-radius: 5px;
+  left: 2rem;
+  position: absolute;
+  width: 95%;
+  height: 120px;
+  border-left: 4px solid;
+  background-color: grey;
+  border-color: lightgrey;
+  color: #cc7e00;
+}
+
+#section5 {
+  border-radius: 5px;
+  left: 2rem;
+  position: absolute;
+  width: 95%;
+  height: 306px;
+  border-left: 4px solid;
+  background-color: grey;
+  border-color: lightgrey;
+  color: #cc7e00;
+}
+
+#modes{
+  position: absolute;
+  //top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+
+
+#Time {
+  border-radius: 5px;
+  left: 2rem;
+  position: absolute;
+  border-width: 0 0 0 4px;
+  width: 20%;
+  height: 158.5px;
+  border-left: 5.5px solid;
+  background-color: grey;
+  border-color: lightgrey;
+  color: #cc7e00;
+}
+
+</style>
+
+<script>
+
+var countDownDate = new Date("Aug 1, 2025 00:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  if(days < 10){
+  document.getElementById("timer").innerHTML = 
+  "0" + days + ":" + 
+  Math.floor(hours/10) + hours%10 + ":"
+  + Math.floor(minutes/10) + minutes%10 + ":" + Math.floor(seconds/10) + seconds%10;
+  }
+  else {
+  document.getElementById("timer").innerHTML = 
+  days + ":" + 
+  Math.floor(hours/10) + hours%10 + ":"
+  + Math.floor(minutes/10) + minutes%10 + ":" + Math.floor(seconds/10) + seconds%10;
+    }
+   
+  if (distance <= 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "<i>(END)</i>";
+    const qqq = document.getElementById("alerttxt");
+    qqq.remove();
+    document.getElementById("uuuuu").innerHTML = "<b><i>New word will be published soon!<br> Please wait.</i></b>";
+    const zest = document.getElementById("t");
+    zest.remove();  
+  }
+}, 1000);
+
+</script>
+
+</head>
+
+<body>
+
+<div id="header" style="display: absolute;">
+    <h1> GUESSLE </h1>
+    <h2> Rules </h2>
+</div>    
+
+<pre>
+<hr>
+</pre>
+
+<div id="Time" style="position: absolute;">
+    <p style="position: absolute; left: 1.7rem;"> <b><ins> REMINDER </ins></b> </p> <br><br>
+    <p style="position: absolute; left: 1.7rem;"> <b>New word in:</b> </p> <br>
+    <p style="position: absolute; left: 1.7rem; font-size: 35px;" id="timer"> </p> 
+</div>
+
+<span onclick="window.location.href='https://guessle.w3spaces.com/index.html';" style="position: absolute; right: 3rem;">
+<img width="40" height="40" src="https://img.icons8.com/ios-filled/50/FFFFFF/country-house.png" alt="country-house"/>
+</span>
+
+<br>
+<h1><ins> How To Play </ins></h1><br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="section1">
+    <p>
+    &nbsp;&nbsp;&nbsp;&nbsp; This game is inspired by <a href="https://www.google.com/search?q=wordle&oq=wordle&aqs=chrome.0.69i59l2j46i131i433i512j69i60l5.1486j0j7&sourceid=chrome&ie=UTF-8">Wordle</a>. <i>Check Wordle's rules, if you are not familiar with them.</i>
+    <br> 
+    </p>
+
+    <p>    &nbsp;&nbsp;&nbsp;&nbsp; There will be given a 5-letter word that (not really) a Wordle player guessed. 
+   <br><br> &nbsp;&nbsp;&nbsp;&nbsp; Here is an example of how it will look like:
+    </p>
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+<p style="text-align: center;"><i>Example 1:</i></p><br>
+<div class="inf">
+
+<button style="background-color: grey;" aria-label="blank, " class="rowletter" disabled="">S</button>
+
+<button style="background-color: grey;" aria-label="blank, " class="rowletter" disabled="">H</button>
+
+<button style="background-color: #d3b943;" aria-label="blank, " class="rowletter" disabled="">A</button>
+
+<button style="background-color: #6aaa64;" class="rowletter" disabled="">R</button>
+
+<button style="background-color:  grey;" aria-label="blank, " class="rowletter" disabled="">E</button>
+</div>
+
+<br><br><br><br>
+<div id="section2">
+    <p>
+    &nbsp;&nbsp;&nbsp;&nbsp; You have to write in the input the possible answers for that Wordle.
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; A possible answer in this case can be:
+</p>
+</div>
+
+<br><br><br><br><br><br>
+<p style="text-align: center;"><i>Example 2:</i></p><br>
+
+<div class="inf">
+<button style="background-color: #6aaa64;" aria-label="blank, " class="rowletter" disabled="">M</button>
+
+<button style="background-color: #6aaa64;" aria-label="blank, " class="rowletter" disabled="">A</button>
+
+<button style="background-color: #6aaa64;" aria-label="blank, " class="rowletter" disabled="">R</button>
+
+<button style="background-color: #6aaa64;" class="rowletter" disabled="">R</button>
+
+<button style="background-color:  #6aaa64;" aria-label="blank, " class="rowletter" disabled="">Y</button>
+</div>
+
+<br><br><br><br>
+<div id="section3">
+    <p>
+    &nbsp;&nbsp;&nbsp;&nbsp; And in this case it CANNOT be:
+    </p>
+</div>
+
+<br><br><br><br>
+<p style="text-align: center;"><i>Example 3:</i></p><br>
+
+<div class="inf">
+
+<button style="background-color: grey;" aria-label="blank, " class="rowletter" disabled="">H</button>
+
+<button style="background-color: #d3b943;" aria-label="blank, " class="rowletter" disabled="">A</button>
+
+<button style="background-color: #d3b943;" aria-label="blank, " class="rowletter" disabled="">R</button>
+
+<button style="background-color: grey;" class="rowletter" disabled="">E</button>
+
+<button style="background-color:  grey;" aria-label="blank, " class="rowletter" disabled="">S</button>
+</div>
+
+<br><br><br><br>
+<div id="section4">
+    <p>
+    &nbsp;&nbsp;&nbsp;&nbsp; <i><b>Explanation</b></i>: The letters <i>S</i>, <i>H</i> and <i>E</i> are not in the word. Also, the letter <i>R</i> is in the fourth spot, not the third.
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; Your already entered words will be in the list of <i><b>Your Words</b></i> on the top right corner of the main page.
+    <br><br>
+    </p>
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+<div id="section5">
+    <p>
+    &nbsp;&nbsp;&nbsp;&nbsp; The mode can be one of the following three:
+    <br><br>
+    <div id="modes"> 
+        <button style="background-color: darkgreen; border: 3px solid black; border-radius: 10px; height: 55px; width: 95px;">EASY</button>
+        <button style="background-color: orange; border: 3px solid black; border-radius: 10px; height: 55px; width: 95px;">MEDIUM</button>
+        <button style="background-color: red; border: 3px solid black; border-radius: 10px; height: 55px; width: 95px;">HARD</button>
+
+    </div>
+  <p style="font-family: arial; color: white; font-size: 22px;">  
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; When you find all of the wanted words, <b>YOU WIN</b>!
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp; <i>There will be published a new word every week</i>.
+    <br><br>
+    
+</p>
+    </p>
+</div>
+
+<br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+<p>
+
+</p>
+<pre>
+<hr>
+</pre>
+
+<h1>Made by rado24</h1>
+<br>
+<h4> Copyright 2023-2024 Guessle </h4>
+
+</body>
+
+</html>
