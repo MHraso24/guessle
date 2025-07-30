@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<!-- Head -->
+<!-- Head -->
+<!-- Head -->
+
+<head>
+    <title> Guessle </title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+
+</head>
+
+<!-- Body -->
+<!-- Body -->
+<!-- Body -->
+
+<body>
+
+    <div id="header" style="display: block;">
+        <h1 style="color: white; font-family: arial; text-align: center;"> GUESSLE </h1>
+    </div>
+
+    <h3><b>Version:</b> July 2025</h3>
+
+    <pre>
+<hr>
+</pre>
+    <!-- Error of guess -->
+    <!-- Error of guess -->
+    <!-- Error of guess -->
+    <div id="alerttxt" style="display: none;">
+
+        <span id="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p id="lblerr">
+        </p>
+    </div>
+
+    <h3 id="loadingwords">LOADING... Please wait...</h3>
+    <button onclick="window.location.href='https://guessle.w3spaces.com/rules.html';" class="helpButton" style="position: absolute; right: 3rem;">
+<img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/FFFFFF/question-mark.png" alt="question-mark"/>
+    </button>
+    <p id="uuuuu" style="text-align: center;"></p>
+    <br>
+    <div id="disclaimer" style="position: absolute;">
+        <p style="position: absolute; left: 1.7rem;"> <i><ins><b>IMPORTANT!</b></ins> <br>Please 
+        note that <br>if you refresh this page, <br>your words will be <b>deleted</b>.</i> </p> <br>
+
+        <span id="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+    <div id="Time" style="position: absolute;">
+        <p style="position: absolute; left: 1.7rem;"> <b>New word in:</b> </p> <br>
+        <p style="position: absolute; left: 1.7rem; font-size: 35px;" id="timer"> </p>
+        <br><br><br><br>
+        <p style="position: absolute; left: 1.7rem;"> <b><i>Have fun! :)</i></b> </p> <br>
+
+    </div>
+
+    <br>
+
+
+    <div id="scoreboard">
+        <p id="Score" style="right: 3rem; font-size: 36px;">
+            Your Score: <br>
+            <b>0%</b>
+        </p>
+
+        <p id="guessed_words" style="right: 3rem; font-size: 31px;">
+            <b>0/16</b> guessed
+        </p>
+
+        <!-- ur words -->
+        <p id="answers" style="right: 3rem; font-size: 31px;">
+            <b>Your Words: </b><br>
+            <i style="color:grey;">no words <br> yet</i>
+        </p>
+    </div>
+
+
+    <div id="diff">
+        <p>Mode:
+            <button style="background-color: orange; border: 3px solid black; border-radius: 10px; height: 55px; width: 95px;">MEDIUM</button>
+        </p>
+    </div>
+
+    <pre>
+    </pre>
+
+    <p style="text-align: center;"> Word: </p><br>
+
+    <div class="inf">
+
+        <button style="background-color: rgb(252 173 17);" aria-label="blank, " class="rowletter" disabled="">A</button>
+
+        <button style="background-color: grey;" aria-label="blank, " class="rowletter" disabled="">N</button>
+
+        <button style="background-color: grey;" aria-label="blank, " class="rowletter" disabled="">G</button>
+
+        <button style="background-color: grey;" class="rowletter" disabled="">L</button>
+
+        <button style="background-color: #6aaa64;" aria-label="blank, " class="rowletter" disabled="">E</button>
+    </div>
+
+    <br> <br>
+    <br>
+    <p style="text-align: center;  font-size: 25.5px;"> <b>Number of wanted words: 16</b> </p>
+    <p style="text-align: center;  font-size: 25.5px;"> <i>Submit your guesses here:</i> </p>
+
+    <div class="Enter">
+
+        <input type="text" id="t" maxlength=5 autocomplete="off" style="font-size: 25px;  left: 50%; background-color: white; color: black; text-align:center; width: 60%; height: 40px; border-radius: 30vh;" placeholder="Enter here">
+
+        <button onclick="usehints();" class="hintsbtn">
+    <b>Hints</b>
+</button>
+
+        <p id="hwords"
+            style="color: white; font-weight: bold; text-align: center; font-size: 27px; font-family: arial;"></p>
+        <br>
+        <div id="enterbtn">
+            <button class="btn" role="button" onclick="checkSubmitted();">
+                <b>Enter</b> 
+            </button>
+        </div>
+
+        <br>
+        <!--
+        <p id="lblerr" style="color: white; font-weight: bold; text-align: center; font-size: 27px; font-family: arial;"></p>
+-->
+
+    </div>
+
+    <hr style="margin-top: 350px;">
+    <h1>Made by rado24</h1>
+
+    <h3 style="margin-bottom: 30px;"> Copyright 2023 - 2025 Guessle </h3>
+
+</body>
+
+</html>
