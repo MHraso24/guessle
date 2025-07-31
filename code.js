@@ -14,9 +14,9 @@ fetch("wordstoday.json")
     });
 
 
-let wc = 16;
+let wc = 10;
 let c = 0;
-let numww = "/16</b> guessed";
+let numww = "/10</b> guessed";
 let forScore = "Your Score: <br>";
 let counteryw = 0;
 
