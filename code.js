@@ -37,7 +37,7 @@ function usehints() {
     }, 10); 
     document.getElementById("alerttxt").style.backgroundColor = '#cc7e00';
 
-    document.getElementById("lblerr").innerHTML = "<b>Hints</b>:<br> <i>pause, share, phase, waste</i>.";
+    document.getElementById("lblerr").innerHTML = "<b>Hints</b>:<br> <i>built, drill, would</i>.";
 }
 
 function checkSubmitted() {
