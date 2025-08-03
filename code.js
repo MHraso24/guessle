@@ -106,7 +106,7 @@ function checkSubmitted() {
         else {
             if (x.length == 5) document.getElementById("lblerr").innerHTML += "Word is either not found in the guessle list or in the wanted words list!";
             if (x.length < 5) {
-                if (x.length == 0) {
+                if (x.length < 1) {
                     document.getElementById("lblerr").innerHTML += "No word filled in the input field!";
                 }
                 else {
